@@ -83,7 +83,7 @@ Then please put the blk*.dat files you want to parse and to construct transactio
 
 :exclamation: Please **ONLY** put the files you want to parse into the folder. Because the program will process 
 **all** the blk*.dat files under it, it is **not** recommended putting something you do not need. But you can keep 
-them there after processing since the program keeps log file to remember which blk*.dat fileS have been processed. 
+them there after processing since the program keeps log file to remember which blk*.dat files have been processed. 
 You can always add new files to the folder.
 
 ### 6. Updating Configurations
