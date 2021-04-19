@@ -1,4 +1,6 @@
-networkx==2.4
+networkx~=2.5.1
 bitcoin==1.1.42
 mysql_connector_repackaged==0.3.1
 pyvis==0.1.9
+mysql~=0.0.2
+mysql-connector-python~=8.0.23

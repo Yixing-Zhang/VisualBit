@@ -64,5 +64,7 @@ class Blockchain(object):
         without ordering them according to height.
         """
         for blk_file in get_files(self.path):
+            blk_list = []
             for raw_block in get_blocks(blk_file):
-                yield Block(raw_block, None, os.path.split(blk_file)[1])
+                blk_list.append(Block(raw_block, None, os.path.split(blk_file)[1]))
+            yield blk_list
