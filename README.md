@@ -1,9 +1,7 @@
 # VisualBit
-***
 This project is my undergraduate final year project fyp20059 in HKU.  
 
 ## Introduction
-***
 **VisualBit** is a tool to facilitate the analyses of Bitcoin transactions. It supports the following features:
 
 + ***Parser*** :  
@@ -23,9 +21,7 @@ This project is my undergraduate final year project fyp20059 in HKU.
         the transactions between entities.
       
 ## Getting started
-***
 ### 1. Getting source codes
-***
 + Use Git :
   ```shell
   git clone https://github.com/Yixing-Zhang/VisualBit.git
@@ -34,7 +30,6 @@ This project is my undergraduate final year project fyp20059 in HKU.
     Unzip the files into your disk.
   
 ### 2. Installing dependencies
-***
 This project is developed with Python 3.9.  
 
 Go to the project folder.  
@@ -53,7 +48,6 @@ pip install -r requirements.txt
 ```
 
 ### 3. Installing MySQL
-***
 This program will make use of **MySQL 8**. It can be downloaded 
 [here](https://dev.mysql.com/downloads/windows/installer/8.0.html).  
 
@@ -61,7 +55,6 @@ Follow the instructions of installer program to install it on your computer and 
 your **username** and **password** which will be used later to modify **config.json**.
 
 ### 4. (Optional) Getting Sample Database
-***
 A [sample MySQL database](https://drive.google.com/drive/folders/1y1CIbFniqIpzj9_9rF8PVeypW4G1C6J3?usp=sharing) 
 based on blk00000.dat and part of blk00001.dat is provided in case you only want to play 
 with the program and do not want to wait (the parsing and clustering can be very time-consuming).  
@@ -82,7 +75,6 @@ because blk00001.dat is only partially constructed and therefore it is not marke
 ignore the messages.
 
 ### 5. Getting Bitcoin Raw Data
-***
 If you do not have blk*.dat raw data files, please download [Bitcoin Core](https://bitcoin.org/en/download) and 
 install it. Run the software, and you will get the raw data files.  
 
@@ -95,7 +87,6 @@ them there after processing since the program keeps log file to remember which b
 You can always add new files to the folder.
 
 ### 6. Updating Configurations
-***
 This project keeps configurations in **config.json**.  
 
 Here are the details for the JSON:  
@@ -121,7 +112,6 @@ Change **log_path** field to your **absolute path** to your **project root + par
 e.g. C:/VisualBit/parsed_logs.txt
 
 ### 7. Run Main Program
-***
 You are all set!  
 
 Please run **VisualBit.py** to start the program:
@@ -130,7 +120,6 @@ python VisualBit.py
 ```
 
 ## Usage
-***
 After starting the program, you will get into the main menu with 6 options:
 
 ![img.png](readme_images/menu.png)
@@ -144,7 +133,6 @@ Select an option to run the corresponding function:
 + Option 5: Generate the interactive transaction graphs using the constructed network.
 
 ### Address Cluster
-***
 To cluster addresses, please **MAKE SURE** you have a constructed database of transactions.  
 
 There are two methods for cluster:  
@@ -153,14 +141,12 @@ There are two methods for cluster:
 + One-time Change (OTC)
 
 #### 1. Common Spending
-***
 The most straightforward idea for grouping Bitcoin addresses of joint ownership is marking all the input addresses of 
 a transaction as belonging to one entity. Only the addresses of joint control can be used to pay in a transaction 
 because the private keys for the addresses are needed to sign on the transaction. Therefore, when a transaction has 
 many inputs, we can conclude they should all belong to one group.
 
 #### 2. One-Time Change
-***
 The *unspent transaction output* (UTXO) change of a transaction will go to a new address by design, which should also 
 belong to the input addresses' owner. The dilemma is to find this change address from the outputs. Many wallet software 
 puts the change address in the last position while some arrange the output sequence randomly. One possible solution is 
@@ -169,7 +155,6 @@ addresses belong to the same entity because it is very unlikely that the inputs 
 the output. The transactions with one output can be seen as the owner is reallocating the UTXO.
 
 ### Transaction Network Construction
-***
 To construct a transaction network, please **MAKE SURE** you have a constructed database of transactions.    
 
 The program will ask for a Bitcoin **address** as the network center (the transactions will be related to the address).  
@@ -189,7 +174,6 @@ It is recommended to be in the **range of [1-5]**, because too many layers will 
 slow to be rendered into graphs.  
 
 ### Transaction Graphs Generation
-***
 To generate transaction graphs, please **MAKE SURE** you have constructed the network.  
 
 There are three types of graphs:  
@@ -203,7 +187,6 @@ folder to have a try. The nodes may be bouncing when they are too crowded. In th
 parameter *gravitationalConstant* in the physics bar.
 
 #### 1. Address-Centered Graphs
-***
 In the address-centered graphs, blue nodes represent the addresses. The edges between nodes stand for 
 transactions between them with direction. The more transactions an address has, the bigger its node will be.  
 
@@ -212,7 +195,6 @@ An example for address *13mpcjvzR4g4enTUYuw6LRb51UgF9P21Ut* with 4 layers:
 ![img.png](readme_images/4_layers_address-centered_graph_13mpcjvzR4g4enTUYuw6LRb51UgF9P21Ut.png)
 
 #### 2. Entity-Centered (Full-Version) Graphs
-***
 For the full version of the entity-centered graph, all the addresses belonging to the entity will be drawn as small 
 nodes, each connecting to the big node: entity, indicating they are in the same group. However, this is not a good 
 graph to render when the nodes are too much. It will be extremely slow to display in the software. Therefore, a 
@@ -223,7 +205,6 @@ An example for address *13mpcjvzR4g4enTUYuw6LRb51UgF9P21Ut* with 1 layer:
 ![img.png](readme_images/1_layer_full_entity-centered_13mpcjvzR4g4enTUYuw6LRb51UgF9P21Ut.png)
 
 #### 3. Entity-Centered (Simplified) Graphs
-***
 The simplified version does not include all the addresses. Instead, it only renders those that are inputs or outputs of 
 the transactions, which reduces the number of nodes significantly making it possible to generate larger graphs.  
 
@@ -232,7 +213,6 @@ An example for address *13mpcjvzR4g4enTUYuw6LRb51UgF9P21Ut* with 2 layer:
 ![img.png](readme_images/2_layers_simplified_entity-centered_13mpcjvzR4g4enTUYuw6LRb51UgF9P21Ut.png)
 
 ## License
-***
 Distributed under the GNU License. See LICENSE for more information.  
 
     VisualBit - A tool to facilitate the analyses of Bitcoin transactions
@@ -254,13 +234,11 @@ Distributed under the GNU License. See LICENSE for more information.
     Email: u3544946@connect.hku.hk
 
 ## Contact
-***
 Email: <u3544946@connect.hku.hk>  
 
 Project link: https://github.com/Yixing-Zhang/VisualBit
 
 ## Acknowledgment
-***
 I would like to express my greatest gratitude here to all the people who have provided supports during the project, 
 especially the project supervisor, Dr. Au Allen, for his guidance on blockchain in terms of giving suggestions and 
 providing related materials.
