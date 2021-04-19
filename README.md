@@ -212,6 +212,16 @@ An example for address *13mpcjvzR4g4enTUYuw6LRb51UgF9P21Ut* with 2 layer:
 
 ![img.png](readme_images/2_layers_simplified_entity-centered_13mpcjvzR4g4enTUYuw6LRb51UgF9P21Ut.png)
 
+## Possible Future updates
+1. **Internet based method for transaction network construction function :**  
+   Make use of <https://blockchain.info/q>'s API to get transaction data. This can save us from parsing locally when we 
+   do not need much cluster info. Update soon.
+2. **GUI implementation :**  
+   Current console version is not beautiful and friendly to interact. Needs some time.
+3. **Parser & cluster efficiency improvement :**  
+   Current parser and cluster are very slow due to massive I/O operations on database. Optimizing program logics and 
+   SQL statements may help. This one is tricky and therefore a long-term goal.
+
 ## License
 Distributed under the GNU License. See LICENSE for more information.  
 
@@ -237,6 +247,22 @@ Distributed under the GNU License. See LICENSE for more information.
 Email: <u3544946@connect.hku.hk>  
 
 Project link: https://github.com/Yixing-Zhang/VisualBit
+
+## References
+[1] T.-H. Chang and D. Svetinovic, "Improving bitcoin ownership identification using transaction patterns analysis," 
+IEEE Transactions on Systems, Man and Cybernetics: Systems, no. 99, pp. 1–12, 2018.  
+[2] M. Fleder, M. S. Kester, and S. Pillai, "Bitcoin Transaction Graph Analysis," arXiv:1502.01657v1 [cs.CR], Feb. 2015.  
+[3] S. Foley, J. R. Karlsen, and T. J. Putniņš, "Sex, Drugs, and Bitcoin: How Much Illegal Activity Is Financed through 
+Cryptocurrencies," The Review of Financial Studies, Vol. 32, pp. 1798-1853, May 2019.  
+[4] M. M¨oser, R. B¨ohme, and D. Breuker, "An inquiry into money laundering tools in the bitcoin ecosystem," in 2013 
+APWG eCrime Researchers Summit. Ieee, 2013, pp. 1–14.  
+[5] Bitcoin core. (n.d.). Bitcoin core. [Online]. Available: https://bitcoin.org/en/bitcoin-core/ 
+[Accessed: 2020, Sep 24].  
+[6] A. M. Antonopoulos, Mastering Bitcoin. Sebastopol: O'Reilly Media, 2014.  
+[7] K. Vaidya. (2016, December 8). Bitcoin's implementation of Blockchain [Online]. Available: 
+https://medium.com/all-things-ledger/bitcoins-implementation-of-blockchain-2be713f662c2 [Accessed: 2020, Sep 24].  
+[8] D. Ermilov, M. Panov and Y. Yanovich, "Automatic Bitcoin Address Clustering," 2017 16th IEEE International 
+Conference on Machine Learning and Applications (ICMLA), Cancun, 2017, pp. 461-466, doi: 10.1109/ICMLA.2017.0-118.  
 
 ## Acknowledgment
 I would like to express my greatest gratitude here to all the people who have provided supports during the project, 
