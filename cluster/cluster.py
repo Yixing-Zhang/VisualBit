@@ -131,7 +131,7 @@ class Cluster(object):
         print("This will take a long time. Please do not shut down the power.")
         print('#' * 30)
         print("OTC cluster starting......")
-        # self.OTC_cluster()
+        self.OTC_cluster()
         print("OTC cluster finished......")
         print('#' * 60)
         print("CS cluster starting......")

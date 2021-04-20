@@ -60,7 +60,7 @@ based on blk00000.dat and part of blk00001.dat is provided in case you only want
 with the program and do not want to wait (the parsing and clustering can be very time-consuming).  
 
 To restore the sample database:  
-1. Download the sample files.
+1. [Download](https://drive.google.com/drive/folders/1y1CIbFniqIpzj9_9rF8PVeypW4G1C6J3?usp=sharing) the sample files.
 2. Open **MySQL Workbench** (use search bar if you can't find it) and connect to your MySQL server **localhost**. 
 3. Go to the **Administration** section under **Navigator** bar, and select **Data Import/Restore**.
 4. Load the databases you download under **Sample Database** folder in **Import Options** and select **all** the 
@@ -83,7 +83,7 @@ Then please put the blk*.dat files you want to parse and to construct transactio
 
 :exclamation: Please **ONLY** put the files you want to parse into the folder. Because the program will process 
 **all** the blk*.dat files under it, it is **not** recommended putting something you do not need. But you can keep 
-them there after processing since the program keeps log file to remember which blk*.dat files have been processed. 
+them there after processing since the program keeps a log file to remember which blk*.dat files have been processed. 
 You can always add new files to the folder.
 
 ### 6. Updating Configurations
@@ -212,7 +212,7 @@ An example for address *13mpcjvzR4g4enTUYuw6LRb51UgF9P21Ut* with 2 layer:
 
 ![img.png](readme_images/2_layers_simplified_entity-centered_13mpcjvzR4g4enTUYuw6LRb51UgF9P21Ut.png)
 
-## Possible Future updates
+## Possible Future Updates
 1. **Internet based method for transaction network construction function :**  
    Make use of <https://blockchain.info/q>'s API to get transaction data. This can save us from parsing locally when we 
    do not need much cluster info. Update soon.
