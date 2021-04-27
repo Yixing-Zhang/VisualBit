@@ -125,7 +125,7 @@ class Cluster(object):
 
     def cluster(self):
         """
-        This the main method for clustering using all the two methods.
+        This is the main method for clustering using all the two methods.
         """
         print("Addresses cluster & database constructing started")
         print("This will take a long time. Please do not shut down the power.")

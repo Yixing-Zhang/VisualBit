@@ -36,7 +36,7 @@ Go to the project folder.
 
 Project requirements :
 + networkx~=2.5.1
-+ bitcoin==1.1.42
++ python-bitcoinlib==0.11.0
 + mysql_connector_repackaged==0.3.1
 + pyvis==0.1.9
 + mysql~=0.0.2
